@@ -53,11 +53,11 @@ console.log("Looking for: " + searchKey);
 
 async function run() {
   try {
-    const database = client.db('ckmdb');
-    const parts = database.collection('cmps415');
+    const database = client.db('Test1_DB');
+    const parts = database.collection('Test1_DB');
 
     // Hardwired Query for a part that has partID '12345'
-    // const query = { partID: '12345' };
+    //const query = { partID: '12345' };
     // But we will use the parameter provided with the route: URL/api/mongo/12345
     
     const query = { partID: req.params.item };
