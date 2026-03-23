@@ -1,7 +1,7 @@
 const { MongoClient } = require("mongodb");
 
 // The uri string must be the connection string for the database (obtained on Atlas).
-const uri = "mongodb+srv://<user>:<password>@ckmdb.5oxvqja.mongodb.net/?retryWrites=true&w=majority";
+// const uri = "mongodb+srv://<user>:<password>@ckmdb.5oxvqja.mongodb.net/?retryWrites=true&w=majority";
 // Make sure the package.json contains:
 //   "dependencies": {
 //    "express": "^4.18.2",
@@ -9,14 +9,14 @@ const uri = "mongodb+srv://<user>:<password>@ckmdb.5oxvqja.mongodb.net/?retryWri
 
 // Alternatively, to not expose the access keys, you may do:
 // MUST RUN: npm install dotenv  ON CONSOLE to begin
-// require('dotenv').config();  // To make the environment vars work, package.json must contain dependency-> "dotenv": "^16.0.0"
+require('dotenv').config();  // To make the environment vars work, package.json must contain dependency-> "dotenv": "^16.0.0"
 // Then get the parameters hidden in .env do:
 // Do this=> const uri = process.env.user;
 // We have also hidden the access keys in .env so alternatively we may use them:
 // so in this case, do these =>
-// const user = process.env.user;
-// const paswd = process.env.paswd;
-// uri = "mongodb+srv://" + user +":"+ paswd +"@ckmdb.5oxvqja.mongodb.net/?retryWrites=true&w=majority";
+const user = process.env.user;
+const paswd = process.env.paswd;
+uri = "mongodb+srv://" + user +":"+ paswd +"@cmps415-cluster.xhthdtt.mongodb.net/?appName=CMPS415-CLuster";
 
 
 
