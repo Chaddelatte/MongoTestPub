@@ -14,11 +14,9 @@ require('dotenv').config();  // To make the environment vars work, package.json 
 // Do this=> const uri = process.env.user;
 // We have also hidden the access keys in .env so alternatively we may use them:
 // so in this case, do these =>
-const user = process.env.user;
-const paswd = process.env.paswd;
-uri = "mongodb+srv://" + user +":"+ paswd +"@cmps415-cluster.xhthdtt.mongodb.net/?appName=CMPS415-CLuster";
-
-
+const user = "web_admin" //process.env.user;
+const paswd = "Access_2_MongoDB" //process.env.paswd;
+const uri = "mongodb+srv://web_admin:Access_2_MongoDB@cmps415-cluster.xhthdtt.mongodb.net/";
 
 // --- This is the standard stuff to get it to work on the browser
 const express = require('express');
